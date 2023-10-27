@@ -5,7 +5,7 @@
 #include <cmath>
 
 int min = INT_MAX;
-std::vector<std::vector<int>> chickenRestaurant, house, CHdistance;
+std::vector<std::vector<int>> chickenRestaurant, house, HCdistance;
 std::vector<int> chickenIndex;
 
 void getMin(int d, int start = 0) {
@@ -14,7 +14,7 @@ void getMin(int d, int start = 0) {
 		for (int i = 0; i < house.size(); i++) {
 			int minDistance = INT_MAX;
 			for (const int& c : chickenIndex) {
-				minDistance = std::min(minDistance, CHdistance[i][c]);
+				minDistance = std::min(minDistance, HCdistance[i][c]);
 			}
 			count += minDistance;
 		}
@@ -47,12 +47,12 @@ int main() {
 		}
 	}
 
-	CHdistance.resize(house.size(), std::vector<int>(chickenRestaurant.size()));
+	HCdistance.resize(house.size(), std::vector<int>(chickenRestaurant.size()));
 
 	for (int i = 0; i < house.size(); i++) {
 		for (int j = 0; j < chickenRestaurant.size(); j++) {
 			int distance = std::abs(house[i][0] - chickenRestaurant[j][0]) + std::abs(house[i][1] - chickenRestaurant[j][1]);
-			CHdistance[i][j] = distance;
+			HCdistance[i][j] = distance;
 		}
 	}
 
