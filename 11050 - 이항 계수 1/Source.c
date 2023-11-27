@@ -1,3 +1,6 @@
+// 동적 계획법을 사용
+// nCr = n-1Cr-1 + n-1Cr
+// 파스칼의 삼각형
 #include <stdio.h>
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
