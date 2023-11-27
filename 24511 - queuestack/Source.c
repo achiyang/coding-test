@@ -1,3 +1,4 @@
+/*원형 이중 연결 리스트를 이용한 Deque 구현*/
 #include <stdio.h>
 #include <stdlib.h>
 
