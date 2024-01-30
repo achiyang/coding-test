@@ -15,7 +15,7 @@ int dp[MAX_N + 2][MAX_M + 2];
 int N, M;
 char line[MAX_M + 1];
 
-static inline int bfs() {
+int bfs() {
 	queue<pair<int, int>> q;
 	q.push(make_pair(1, 1));
 	dp[1][1] = 1;
